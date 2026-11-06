@@ -22,11 +22,7 @@ Supervisor: Dr. Saif Hassan
 - Disclaimer
 
   ## Demo Video
-  <video width="100%" controls>
-  <source src="https://github.com/abroamjad804/SafeBite/blob/298269be863c2caae3b00912ad23600d22f9945a/SafeBite_Demo.mp4" type="video/mp4">
-  Your browser does not support video playback.
-</video>
-
+  [▶ Watch Project Demo](https://github.com/abroamjad804/SafeBite/blob/298269be863c2caae3b00912ad23600d22f9945a/SafeBite_Demo.mp4)
   ![SafeBite App Demo](https://github.com/abroamjad804/SafeBite/blob/298269be863c2caae3b00912ad23600d22f9945a/SafeBite_Demo.mp4)
 # Software Requirements Specification (SRS)
 [SRS](https://github.com/abroamjad804/SafeBite/blob/38081e519871fb35295e0e5204ed4e0c9de5711d/Software_Requirements_Specification(SRS).pdf)
