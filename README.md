@@ -28,16 +28,21 @@ Supervisor: Dr. Saif Hassan
 # Software Design Specification (SDS)
 [SDS](https://github.com/abroamjad804/SafeBite/blob/7ba8540cbcb76f744e3b570a84afa20e4d042c59/Software_Design_Specifications(SDS).pdf)
 ## Key features
-S.No.	Feature	Description
-1	Local Account Flow	Allows users to sign up, sign in, or continue as a guest.
-2	Personal Health Profile	Maintains user details, allergies, ingredients to avoid, dietary needs, nutrition goals, and preferences.
-3	Ingredient-Label OCR	Extracts ingredient text from selected or captured label images using Google ML Kit Text Recognition on supported mobile platforms.
-4	Ingredient Matching	Matches extracted ingredient names and aliases against the bundled CSV dataset.
-5	Personalized Assessment	Calculates the Personal Health Suitability Score (PHSS) using ingredient information and user profile settings.
-6	Clear Result Categories	Displays Safe, Caution, or Avoid results with relevant reasons and warnings.
-7	Unmatched Ingredient Warnings	Identifies ingredients missing from the local dataset for manual verification.
-8	Scan History	Saves previous analysis results locally and allows users to review or delete history entries.
-9	Flutter UI	Provides a Material-based interface with reusable visual components and a consistent application theme.
+## 🚀 Key Features
+
+| # | Feature | Description |
+|:---:|---|---|
+| 1 | **Local Account Management** | Supports user registration, sign-in, and guest access for a flexible authentication experience. |
+| 2 | **Personal Health Profile** | Allows users to manage personal details, allergies, ingredients to avoid, dietary requirements, nutrition goals, and dietary preferences. |
+| 3 | **Ingredient Label OCR** | Enables users to capture or upload product ingredient labels and extract text using Google ML Kit Text Recognition on supported mobile platforms. |
+| 4 | **Ingredient Matching** | Matches extracted ingredient names and their aliases against the locally bundled CSV ingredient dataset. |
+| 5 | **Personalized Health Assessment** | Calculates the Personal Health Suitability Score (PHSS) based on ingredient information and individual health profile settings. |
+| 6 | **Result Classification** | Displays clear assessment categories: **Safe, Caution, or Avoid**, along with explanations, relevant reasons, and warnings. |
+| 7 | **Unmatched Ingredient Detection** | Identifies ingredients that are not available in the local dataset and highlights them for manual verification. |
+| 8 | **Scan History Management** | Stores previous ingredient analysis results locally and allows users to review or delete saved scan history entries. |
+| 9 | **Flutter-Based User Interface** | Provides a modern Material Design interface with reusable UI components, consistent styling, and a customized application theme. |
+
+---
 ## How it works
 1. Create a profile or continue as guest.
 2. Set personal preferences. Add allergies, avoid-list items, dietary needs, nutrition goals, and dietary preferences.
