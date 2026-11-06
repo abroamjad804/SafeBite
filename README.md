@@ -4,6 +4,9 @@
 SafeBite is a Flutter-based Android application prototype that helps users review packaged-food ingredient labels in the context of their personal dietary profile. Users can create a local profile, record allergies and dietary preferences, scan or select an ingredient-label image, review recognized ingredients, and receive a Personal Health Suitability Score (PHSS) with explanatory warnings.
 Project status: Academic / FYP prototype. The current implementation uses on-device OCR and a bundled starter ingredient dataset. It is not a clinically validated medical or nutrition assessment tool.
 
+Final Year Project, BS Computer Science (Batch 23), Department of Computer science, Sukkur IBA University.
+Supervisor: Dr. Saif Hassan
+
 ## Contents
 - Key features
 - How it works
@@ -25,15 +28,16 @@ Project status: Academic / FYP prototype. The current implementation uses on-dev
 # Software Design Specification (SDS)
 [SDS](https://github.com/abroamjad804/SafeBite/blob/7ba8540cbcb76f744e3b570a84afa20e4d042c59/Software_Design_Specifications(SDS).pdf)
 ## Key features
-- Local account flow: Sign up, sign in, or continue as a guest.
-- Personal health profile: Maintain profile details, allergies, ingredients to avoid, dietary needs, nutrition goals, and dietary preferences.
-- Ingredient-label OCR: Select or capture a label image and extract text using Google ML Kit Text Recognition on supported mobile platforms.
-- Ingredient matching: Compare extracted ingredient names and aliases against the bundled CSV dataset.
-- Personalized assessment: Calculate a PHSS using the available ingredient signals and profile settings.
-- Clear result categories: Present a Safe, Caution, or Avoid result, along with reasons and warnings.
-- Unmatched ingredient warnings: Explicitly identify ingredients that are not present in the local dataset so they can be checked manually.
-- Scan history: Save previous analysis results locally and review or remove history entries.
-- Flutter UI: Material-based interface with reusable visual components and app theme.
+S.No.	Feature	Description
+1	Local Account Flow	Allows users to sign up, sign in, or continue as a guest.
+2	Personal Health Profile	Maintains user details, allergies, ingredients to avoid, dietary needs, nutrition goals, and preferences.
+3	Ingredient-Label OCR	Extracts ingredient text from selected or captured label images using Google ML Kit Text Recognition on supported mobile platforms.
+4	Ingredient Matching	Matches extracted ingredient names and aliases against the bundled CSV dataset.
+5	Personalized Assessment	Calculates the Personal Health Suitability Score (PHSS) using ingredient information and user profile settings.
+6	Clear Result Categories	Displays Safe, Caution, or Avoid results with relevant reasons and warnings.
+7	Unmatched Ingredient Warnings	Identifies ingredients missing from the local dataset for manual verification.
+8	Scan History	Saves previous analysis results locally and allows users to review or delete history entries.
+9	Flutter UI	Provides a Material-based interface with reusable visual components and a consistent application theme.
 ## How it works
 1. Create a profile or continue as guest.
 2. Set personal preferences. Add allergies, avoid-list items, dietary needs, nutrition goals, and dietary preferences.
