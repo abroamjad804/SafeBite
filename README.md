@@ -1,4 +1,5 @@
 # SafeBite
+<<<<<<< HEAD
 
 AI-driven food ingredient analysis. Scan a barcode, get a Personal Health Suitability Score (PHSS) based on your allergies, dietary needs and goals.
 
@@ -25,3 +26,6 @@ then download `safebite-apk` from the run's Artifacts.
 - The starter ingredient dataset is `assets/datasets/ingredients.csv`. Replace/expand it with the verified project dataset before evaluation. No ingredient data is fabricated by the app.
 - PHSS is calculated from the recognized ingredient signals and profile. OCR does not currently extract nutrition facts, so the result includes a warning that nutrition-based factors may be incomplete. Unmatched ingredients are explicitly flagged for verification.
 - Run `flutter pub get` after extracting the project, then `flutter run` on an Android device/emulator. Camera permission is already declared in the Android manifest.
+=======
+AI-powered personalized food ingredient analysis application
+>>>>>>> 0ddad54ba83cd1b0bb68db3b5f0cb76d79577839
