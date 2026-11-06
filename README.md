@@ -17,6 +17,9 @@ Project status: Academic / FYP prototype. The current implementation uses on-dev
 - Current limitations
 - Privacy and security
 - Disclaimer
+
+  ## Demo Video
+  ![SafeBite App Demo](assets/demo.gif)
 ## Key features
 - Local account flow: Sign up, sign in, or continue as a guest.
 - Personal health profile: Maintain profile details, allergies, ingredients to avoid, dietary needs, nutrition goals, and dietary preferences.
