@@ -20,9 +20,9 @@ Project status: Academic / FYP prototype. The current implementation uses on-dev
 
   ## Demo Video
   ![SafeBite App Demo](https://github.com/abroamjad804/SafeBite/blob/298269be863c2caae3b00912ad23600d22f9945a/SafeBite_Demo.mp4)
-# SRS
-[FYP Proposal](docs/FYP_Proposal.)
-# SDS
+# Software Requirements Specification (SRS)
+[SRS](https://github.com/abroamjad804/SafeBite/blob/38081e519871fb35295e0e5204ed4e0c9de5711d/Software_Requirements_Specification(SRS).pdf)
+# Software Design Specification (SDS)
 [SDS](https://github.com/abroamjad804/SafeBite/blob/7ba8540cbcb76f744e3b570a84afa20e4d042c59/Software_Design_Specifications(SDS).pdf)
 ## Key features
 - Local account flow: Sign up, sign in, or continue as a guest.
