@@ -1,10 +1,10 @@
-SafeBite
-AI-driven food ingredient analysis and personalized health suitability assessment
+# SafeBite
+## AI-Driven Mobile Application for Personalized Food Ingredient Analysis and Health and Nutrition RecommendationsUsing RAG, LLMs, and Contextual Intelligence
 
 SafeBite is a Flutter-based Android application prototype that helps users review packaged-food ingredient labels in the context of their personal dietary profile. Users can create a local profile, record allergies and dietary preferences, scan or select an ingredient-label image, review recognized ingredients, and receive a Personal Health Suitability Score (PHSS) with explanatory warnings.
 Project status: Academic / FYP prototype. The current implementation uses on-device OCR and a bundled starter ingredient dataset. It is not a clinically validated medical or nutrition assessment tool.
 
-Contents
+## Contents
 - Key features
 - How it works
 - PHSS calculation
@@ -17,7 +17,7 @@ Contents
 - Current limitations
 - Privacy and security
 - Disclaimer
-Key features
+## Key features
 - Local account flow: Sign up, sign in, or continue as a guest.
 - Personal health profile: Maintain profile details, allergies, ingredients to avoid, dietary needs, nutrition goals, and dietary preferences.
 - Ingredient-label OCR: Select or capture a label image and extract text using Google ML Kit Text Recognition on supported mobile platforms.
@@ -27,7 +27,7 @@ Key features
 - Unmatched ingredient warnings: Explicitly identify ingredients that are not present in the local dataset so they can be checked manually.
 - Scan history: Save previous analysis results locally and review or remove history entries.
 - Flutter UI: Material-based interface with reusable visual components and app theme.
-How it works
+## How it works
 1. Create a profile or continue as guest.
 2. Set personal preferences. Add allergies, avoid-list items, dietary needs, nutrition goals, and dietary preferences.
 3. Scan an ingredient label. Choose an image containing the product's ingredient list.
@@ -67,7 +67,7 @@ Charts / visual elements	fl_chart and reusable custom widgets
 Ingredient data	CSV asset
 
 
-Project structure
+## Project structure
 safebite_app/
 ├── android/                         # Android platform project
 ├── assets/
@@ -91,14 +91,14 @@ safebite_app/
 │   └── build-apk.yml                 # GitHub Actions APK workflow
 ├── pubspec.yaml                      # Dependencies and assets
 └── README.md
-Requirements
+## Requirements
 - Flutter SDK compatible with the Dart constraint in pubspec.yaml (^3.13.7).
 - Android SDK and Android toolchain configured.
 - Android device or emulator for testing.
 - USB debugging enabled if running on a physical Android phone.
 Check your Flutter installation:
 flutter doctor
-Setup and run
+## Setup and run
 1. Extract the project ZIP.
 2. Open a terminal in the safebite_app project directory (the directory containing pubspec.yaml).
 3. Install dependencies:
@@ -114,7 +114,7 @@ Build a release APK locally:
 flutter build apk --release
 The APK is generated at:
 build/app/outputs/flutter-apk/app-release.apk
-Build with GitHub Actions
+## Build with GitHub Actions
 This repository includes .github/workflows/build-apk.yml.
 1. Push the contents of the safebite_app folder to a GitHub repository.
 2. Open the repository's Actions tab.
@@ -122,11 +122,11 @@ This repository includes .github/workflows/build-apk.yml.
 4. When the workflow completes, open the workflow run.
 5. Download the safebite-apk artifact.
 The workflow installs Java 17 and Flutter, fetches dependencies, builds the release APK, and uploads the APK as an artifact.
-Dataset
+## Dataset
 The starter ingredient dataset is located at:
 assets/datasets/ingredients.csv
 The current matching logic uses the ingredient name, aliases, and category columns. Keep the CSV header and expected column order consistent with the implementation when editing it. Use reliable, traceable sources when adding ingredient information, and review the dataset before project evaluation or public release.
-Current limitations
+## Current limitations
 - Prototype authentication: Accounts and profile data are stored on the device using SharedPreferences. There is no secure remote authentication service or multi-device account synchronization.
 - Local storage: User profile and scan history are device-local and may be lost if app data is cleared or the app is uninstalled.
 - OCR accuracy: Recognition depends on image quality, lighting, focus, label layout, and supported text. Always verify extracted text against the physical package.
@@ -139,9 +139,8 @@ Privacy and security
 This prototype stores account information, profile details, and scan history locally on the device. Passwords are hashed with SHA-256 in the local prototype, but this is not a production-grade authentication design. Do not use real or sensitive personal information in a demonstration build.
 
 Before production deployment, implement a secure backend, use a modern password-hashing scheme on the server (with a unique salt and an appropriate work factor), protect data in transit and at rest, define retention/deletion policies, and obtain informed consent for any personal data processing.
-Disclaimer
-SafeBite is an educational software prototype intended to demonstrate personalized ingredient-label analysis. It does not provide medical advice and cannot guarantee that a food product is safe for any individual. Ingredient labels and manufacturing practices can change, OCR and dataset matching can be incomplete, and cross-contamination information may not be captured. Users should verify the complete package information and consult a qualified healthcare professional or dietitian for individual medical or dietary decisions.
-Contributing
+
+## Contributing
 For project development:
 1. Create a feature branch.
 2. Make focused changes and run relevant checks.
