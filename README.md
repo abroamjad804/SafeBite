@@ -23,9 +23,14 @@ Supervisor: Dr. Saif Hassan
 
   ## Demo Video
   [▶ Watch Project Demo](https://github.com/abroamjad804/SafeBite/blob/298269be863c2caae3b00912ad23600d22f9945a/SafeBite_Demo.mp4)
-  ![SafeBite App Demo](https://github.com/abroamjad804/SafeBite/blob/298269be863c2caae3b00912ad23600d22f9945a/SafeBite_Demo.mp4)
+
 # Software Requirements Specification (SRS)
-[SRS](https://github.com/abroamjad804/SafeBite/blob/38081e519871fb35295e0e5204ed4e0c9de5711d/Software_Requirements_Specification(SRS).pdf)
+[SRS]
+[📄 View SRS Document](https://github.com/abroamjad804/SafeBite/blob/38081e519871fb35295e0e5204ed4e0c9de5711d/Software_Requirements_Specification(SRS).pdf)
+
+[📄 View SDS Document](docs/SDS.pdf)
+
+(https://github.com/abroamjad804/SafeBite/blob/38081e519871fb35295e0e5204ed4e0c9de5711d/Software_Requirements_Specification(SRS).pdf)
 # Software Design Specification (SDS)
 [SDS](https://github.com/abroamjad804/SafeBite/blob/7ba8540cbcb76f744e3b570a84afa20e4d042c59/Software_Design_Specifications(SDS).pdf)
 ## Key features
