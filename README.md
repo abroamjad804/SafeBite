@@ -67,37 +67,7 @@ Charts / visual elements	fl_chart and reusable custom widgets
 Ingredient data	CSV asset
 
 
-## Project structure
-safebite_app/
-├── android/                         # Android platform project
-├── assets/
-│   └── datasets/
-│       └── ingredients.csv          # Starter ingredient names and aliases
-├── lib/
-│   ├── core/
-│   │   ├── constants/                # App constants
-│   │   ├── theme/                    # App theme
-│   │   └── utils/                    # Routing and PHSS calculation
-│   ├── data/
-│   │   ├── models/                   # User, product, and scan-history models
-│   │   ├── providers/                # Authentication and scan state
-│   │   └── services/                 # OCR platform implementations
-│   ├── presentation/
-│   │   ├── screens/                  # App screens
-│   │   └── widgets/                  # Reusable UI components
-│   └── main.dart                     # Application entry point
-├── test/                             # Flutter tests
-├── .github/workflows/
-│   └── build-apk.yml                 # GitHub Actions APK workflow
-├── pubspec.yaml                      # Dependencies and assets
-└── README.md
-## Requirements
-- Flutter SDK compatible with the Dart constraint in pubspec.yaml (^3.13.7).
-- Android SDK and Android toolchain configured.
-- Android device or emulator for testing.
-- USB debugging enabled if running on a physical Android phone.
-Check your Flutter installation:
-flutter doctor
+
 ## Setup and run
 1. Extract the project ZIP.
 2. Open a terminal in the safebite_app project directory (the directory containing pubspec.yaml).
