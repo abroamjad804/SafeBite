@@ -8,34 +8,33 @@ Final Year Project, BS Computer Science (Batch 23), Department of Computer scien
 Supervisor: Dr. Saif Hassan
 
 ## Contents
-- Key features
-- How it works
-- PHSS calculation
-- Technology stack
-- Project structure
-- Requirements
-- Setup and run
-- Build an Android APK
-- Dataset
-- Current limitations
-- Privacy and security
-- Disclaimer
+## 📑 Table of Contents
+
+| No. | Documentation Section |
+|:---:|---|
+| 01 | [🚀 Key Features](#-key-features) |
+| 02 | [⚙️ How It Works](#-how-it-works) |
+| 03 | [📊 PHSS Calculation](#-phss-calculation) |
+| 04 | [💻 Technology Stack](#-technology-stack) |
+| 05 | [📁 Project Structure](#-project-structure) |
+| 06 | [📋 Requirements](#-requirements) |
+| 07 | [🛠️ Setup and Run](#-setup-and-run) |
+| 08 | [📱 Build an Android APK](#-build-an-android-apk) |
+| 09 | [🗂️ Dataset](#-dataset) |
+| 10 | [⚠️ Current Limitations](#-current-limitations) |
+| 11 | [🔒 Privacy and Security](#-privacy-and-security) |
+| 12 | [📌 Disclaimer](#-disclaimer) |
 
   ## Demo Video
   [▶ Watch Project Demo](https://github.com/abroamjad804/SafeBite/blob/298269be863c2caae3b00912ad23600d22f9945a/SafeBite_Demo.mp4)
 
 # Software Requirements Specification (SRS)
-[SRS]
+
 [📄 View SRS Document](https://github.com/abroamjad804/SafeBite/blob/38081e519871fb35295e0e5204ed4e0c9de5711d/Software_Requirements_Specification(SRS).pdf)
-
-[📄 View SDS Document](docs/SDS.pdf)
-
-(https://github.com/abroamjad804/SafeBite/blob/38081e519871fb35295e0e5204ed4e0c9de5711d/Software_Requirements_Specification(SRS).pdf)
 # Software Design Specification (SDS)
-[SDS](https://github.com/abroamjad804/SafeBite/blob/7ba8540cbcb76f744e3b570a84afa20e4d042c59/Software_Design_Specifications(SDS).pdf)
+[📄 View SDS Document](https://github.com/abroamjad804/SafeBite/blob/7ba8540cbcb76f744e3b570a84afa20e4d042c59/Software_Design_Specifications(SDS).pdf)
 ## Key features
 ## 🚀 Key Features
-
 | # | Feature | Description |
 |:---:|---|---|
 | 1 | **Local Account Management** | Supports user registration, sign-in, and guest access for a flexible authentication experience. |
