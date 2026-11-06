@@ -22,6 +22,11 @@ Supervisor: Dr. Saif Hassan
 - Disclaimer
 
   ## Demo Video
+  <video width="100%" controls>
+  <source src="https://github.com/abroamjad804/SafeBite/blob/298269be863c2caae3b00912ad23600d22f9945a/SafeBite_Demo.mp4" type="video/mp4">
+  Your browser does not support video playback.
+</video>
+
   ![SafeBite App Demo](https://github.com/abroamjad804/SafeBite/blob/298269be863c2caae3b00912ad23600d22f9945a/SafeBite_Demo.mp4)
 # Software Requirements Specification (SRS)
 [SRS](https://github.com/abroamjad804/SafeBite/blob/38081e519871fb35295e0e5204ed4e0c9de5711d/Software_Requirements_Specification(SRS).pdf)
@@ -117,10 +122,22 @@ The current matching logic uses the ingredient name, aliases, and category colum
 
 
 ## UI
-Soft-depth "3D" design system in `lib/presentation/widgets/common/fx.dart`:
-`Icon3D`, `RaisedCard`, `GradientButton`, `ScoreRing`, `StatusPill`, `ProductThumb`.
-All icons are Material Rounded icons (no emoji).
+## 🎨 UI Design System
 
+| # | Component | Description |
+|:---:|---|---|
+| 1 | **Icon3D** | Provides soft-depth 3D-style icons using Material Rounded iconography. |
+| 2 | **RaisedCard** | Creates elevated card layouts with subtle shadows and a soft-depth visual appearance. |
+| 3 | **GradientButton** | Provides gradient-styled buttons for attractive and interactive user actions. |
+| 4 | **ScoreRing** | Displays PHSS scores using a circular progress indicator. |
+| 5 | **StatusPill** | Displays assessment statuses such as Safe, Caution, and Avoid using styled status indicators. |
+| 6 | **ProductThumb** | Provides thumbnail previews for product images. |
+
+**Implementation:** `lib/presentation/widgets/common/fx.dart`
+
+**Design Style:** Soft-depth 3D design system with Material Rounded icons. All icons use Material Rounded iconography instead of emojis.
+
+---
 ## Run
     flutter pub get
     flutter run
@@ -131,14 +148,29 @@ then download `safebite-apk` from the run's Artifacts.
 
 ## SafeBite OCR implementation notes
 
-- Authentication is currently a **local prototype** using SharedPreferences and SHA-256 password hashes. It is not a production account service; connect a secure backend (Firebase Auth/Supabase/custom API) before deployment.
-- Signup collects full name, age, email and a password of 8–12 characters containing uppercase, lowercase and numeric characters.
-- Guest sessions are stored locally and can build a health profile without a demo account.
-- Health profile entries are user-typed and saved after each update. Profile photos are selected from the gallery and stored locally.
-- Ingredient-label OCR uses Google ML Kit Text Recognition on Android/iOS. Web builds currently show an availability message because this OCR plugin is mobile-only.
-- The starter ingredient dataset is `assets/datasets/ingredients.csv`. Replace/expand it with the verified project dataset before evaluation. No ingredient data is fabricated by the app.
-- PHSS is calculated from the recognized ingredient signals and profile. OCR does not currently extract nutrition facts, so the result includes a warning that nutrition-based factors may be incomplete. Unmatched ingredients are explicitly flagged for verification.
-- Run `flutter pub get` after extracting the project, then `flutter run` on an Android device/emulator. Camera permission is already declared in the Android manifest.
-=======
-AI-powered personalized food ingredient analysis application
->>>>>>> 0ddad54ba83cd1b0bb68db3b5f0cb76d79577839
+## ⚙️ Technical Details, Limitations & Setup
+
+| # | Category | Description |
+|:---:|---|---|
+| 1 | **Authentication** | Authentication is currently a local prototype using SharedPreferences and SHA-256 password hashes. It is not a production-ready account service. A secure backend such as Firebase Auth, Supabase, or a custom API is required before deployment. |
+| 2 | **Signup Requirements** | Registration collects the user's full name, age, email, and password. Passwords must contain 8–12 characters, including uppercase letters, lowercase letters, and numeric characters. |
+| 3 | **Guest Access** | Guest sessions are stored locally and allow users to create and manage their health profiles without registering for a demo account. |
+| 4 | **Health Profile Storage** | Health profile information is entered manually by users and saved locally after each update. Profile photos can be selected from the device gallery and stored locally. |
+| 5 | **OCR Compatibility** | Ingredient-label text recognition uses Google ML Kit Text Recognition on Android and iOS. Web builds currently display an availability message because the OCR plugin supports mobile platforms only. |
+| 6 | **Ingredient Dataset** | The starter ingredient dataset is located at `assets/datasets/ingredients.csv`. It should be replaced or expanded with the verified project dataset before evaluation. The application does not fabricate ingredient data. |
+| 7 | **PHSS Calculation** | The Personal Health Suitability Score (PHSS) is calculated using recognized ingredient signals and the user's health profile. |
+| 8 | **Nutrition Data Limitation** | OCR currently does not extract nutrition facts. Therefore, nutrition-based assessment factors may be incomplete, and the application displays a relevant warning. |
+| 9 | **Unmatched Ingredients** | Ingredients that cannot be matched with the local dataset are explicitly flagged for manual verification. |
+| 10 | **Dependency Installation** | Run `flutter pub get` after extracting the project to install the required Flutter dependencies. |
+| 11 | **Application Execution** | Run `flutter run` to launch the application on a connected Android device or emulator. |
+| 12 | **Camera Permission** | Camera permission is already declared in the Android manifest for capturing ingredient-label images. |
+
+---
+
+## ▶️ Getting Started
+
+Run the following commands in your project terminal:
+
+```bash
+flutter pub get
+flutter run
