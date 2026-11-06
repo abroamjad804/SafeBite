@@ -21,9 +21,9 @@ Project status: Academic / FYP prototype. The current implementation uses on-dev
   ## Demo Video
   ![SafeBite App Demo](https://github.com/abroamjad804/SafeBite/blob/298269be863c2caae3b00912ad23600d22f9945a/SafeBite_Demo.mp4)
 # SRS
-[FYP Proposal](docs/FYP_Proposal.pdf)
+[FYP Proposal](docs/FYP_Proposal.)
 # SDS
-[FYP Proposal](docs/FYP_Proposal.pdf)
+[SDS](https://github.com/abroamjad804/SafeBite/blob/7ba8540cbcb76f744e3b570a84afa20e4d042c59/Software_Design_Specifications(SDS).pdf)
 ## Key features
 - Local account flow: Sign up, sign in, or continue as a guest.
 - Personal health profile: Maintain profile details, allergies, ingredients to avoid, dietary needs, nutrition goals, and dietary preferences.
