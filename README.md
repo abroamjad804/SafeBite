@@ -4,35 +4,32 @@
 SafeBite is a Flutter-based Android application prototype that helps users review packaged-food ingredient labels in the context of their personal dietary profile. Users can create a local profile, record allergies and dietary preferences, scan or select an ingredient-label image, review recognized ingredients, and receive a Personal Health Suitability Score (PHSS) with explanatory warnings.
 Project status: Academic / FYP prototype. The current implementation uses on-device OCR and a bundled starter ingredient dataset. It is not a clinically validated medical or nutrition assessment tool.
 
-Final Year Project, BS Computer Science (Batch 23), Department of Computer science, Sukkur IBA University.
-Supervisor: Dr. Saif Hassan
+## 👨‍💻 Project Team
 
-## Contents
-## 📑 Table of Contents
+**Final Year Project — BS Computer Science**
 
-| No. | Documentation Section |
-|:---:|---|
-| 01 | [🚀 Key Features](#-key-features) |
-| 02 | [⚙️ How It Works](#-how-it-works) |
-| 03 | [📊 PHSS Calculation](#-phss-calculation) |
-| 04 | [💻 Technology Stack](#-technology-stack) |
-| 05 | [📁 Project Structure](#-project-structure) |
-| 06 | [📋 Requirements](#-requirements) |
-| 07 | [🛠️ Setup and Run](#-setup-and-run) |
-| 08 | [📱 Build an Android APK](#-build-an-android-apk) |
-| 09 | [🗂️ Dataset](#-dataset) |
-| 10 | [⚠️ Current Limitations](#-current-limitations) |
-| 11 | [🔒 Privacy and Security](#-privacy-and-security) |
-| 12 | [📌 Disclaimer](#-disclaimer) |
+| Team Member | Role |
+|---|---|
+| Amjad Ali Abro | Developer |
+| Sarfraz Ali Katpar | Developer |
+| Sehrish Khemani | Developer |
 
-  ## Demo Video
+**Institution:** Sukkur IBA University
+
+**Department:** Computer Science
+
+**Supervisor:** Dr. Saif Hassan
+
+## Demo Video
   [▶ Watch Project Demo](https://github.com/abroamjad804/SafeBite/blob/298269be863c2caae3b00912ad23600d22f9945a/SafeBite_Demo.mp4)
 
-# Software Requirements Specification (SRS)
+## Software Requirements Specification (SRS)
 
 [📄 View SRS Document](https://github.com/abroamjad804/SafeBite/blob/38081e519871fb35295e0e5204ed4e0c9de5711d/Software_Requirements_Specification(SRS).pdf)
-# Software Design Specification (SDS)
+
+## Software Design Specification (SDS)
 [📄 View SDS Document](https://github.com/abroamjad804/SafeBite/blob/7ba8540cbcb76f744e3b570a84afa20e4d042c59/Software_Design_Specifications(SDS).pdf)
+
 ## Key features
 ## 🚀 Key Features
 | # | Feature | Description |
@@ -67,7 +64,6 @@ N — Nutrition goals	30%	Evaluates supported goals such as reducing sugar or ca
 D — Dietary preferences	20%	Checks supported preferences such as vegetarian or vegan
 G — General ingredient suitability	10%	Applies the current list of ingredient/additive signals
 
-
 Current score labels:
 - Safe: score of 80 or above
 - Caution: score from 50 to below 80
@@ -87,8 +83,6 @@ Image selection	image_picker
 Charts / visual elements	fl_chart and reusable custom widgets
 Ingredient data	CSV asset
 
-
-
 ## Setup and run
 1. Extract the project ZIP.
 2. Open a terminal in the safebite_app project directory (the directory containing pubspec.yaml).
@@ -105,6 +99,7 @@ Build a release APK locally:
 flutter build apk --release
 The APK is generated at:
 build/app/outputs/flutter-apk/app-release.apk
+
 ## Build with GitHub Actions
 This repository includes .github/workflows/build-apk.yml.
 1. Push the contents of the safebite_app folder to a GitHub repository.
@@ -113,13 +108,103 @@ This repository includes .github/workflows/build-apk.yml.
 4. When the workflow completes, open the workflow run.
 5. Download the safebite-apk artifact.
 The workflow installs Java 17 and Flutter, fetches dependencies, builds the release APK, and uploads the APK as an artifact.
+
 ## Dataset
 The starter ingredient dataset is located at:
 assets/datasets/ingredients.csv
 The current matching logic uses the ingredient name, aliases, and category columns. Keep the CSV header and expected column order consistent with the implementation when editing it. Use reliable, traceable sources when adding ingredient information, and review the dataset before project evaluation or public release.
 
-
-
+## Project Structure
+safebite_app/
+│
+├── android/                         # Android platform configuration
+│
+├── assets/
+│   ├── images/                      # Application images
+│   ├── icons/                       # Custom icons
+│   └── animations/                  # Animation assets
+│
+├── lib/
+│   │
+│   ├── core/
+│   │   ├── constants/
+│   │   │   └── app_constants.dart   # App-wide constants
+│   │   │
+│   │   ├── services/                # Core application services
+│   │   │
+│   │   ├── theme/
+│   │   │   └── app_theme.dart       # Colors, styles and themes
+│   │   │
+│   │   └── utils/
+│   │       ├── app_router.dart      # Application navigation
+│   │       └── phss_calculator.dart # PHSS scoring algorithm
+│   │
+│   ├── data/
+│   │   ├── models/
+│   │   │   ├── product_model.dart       # Product data model
+│   │   │   ├── user_profile_model.dart # User health profile
+│   │   │   └── scan_history_model.dart  # Scan history model
+│   │   │
+│   │   ├── providers/
+│   │   │   ├── auth_provider.dart   # Authentication state
+│   │   │   └── scan_provider.dart   # Product scanning and analysis
+│   │   │
+│   │   └── repositories/            # Data access layer
+│   │
+│   ├── presentation/
+│   │   │
+│   │   ├── screens/
+│   │   │   ├── auth/
+│   │   │   │   ├── splash_screen.dart
+│   │   │   │   ├── onboarding_screen.dart
+│   │   │   │   ├── login_screen.dart
+│   │   │   │   └── signup_screen.dart
+│   │   │   │
+│   │   │   ├── home/
+│   │   │   │   ├── home_screen.dart
+│   │   │   │   └── main_shell.dart
+│   │   │   │
+│   │   │   ├── scan/
+│   │   │   │   ├── scan_screen.dart
+│   │   │   │   ├── scan_screen_mobile.dart
+│   │   │   │   ├── scan_screen_web.dart
+│   │   │   │   ├── scan_screen_stub.dart
+│   │   │   │   ├── scan_impl.dart
+│   │   │   │   ├── scan_view.dart
+│   │   │   │   └── result_screen.dart
+│   │   │   │
+│   │   │   ├── ingredient/          # Ingredient-related screens
+│   │   │   ├── history/
+│   │   │   │   └── history_screen.dart
+│   │   │   │
+│   │   │   ├── profile/
+│   │   │   │   └── profile_screen.dart
+│   │   │   │
+│   │   │   └── comparison/          # Product comparison screens
+│   │   │
+│   │   └── widgets/
+│   │       ├── common/
+│   │       │   ├── auth_shell.dart
+│   │       │   └── fx.dart
+│   │       │
+│   │       ├── home/                # Home screen widgets
+│   │       └── scan/                # Scanning widgets
+│   │
+│   └── main.dart                    # Application entry point
+│
+├── test/
+│   └── widget_test.dart             # Flutter widget tests
+│
+├── .github/
+│   └── workflows/
+│       └── build-apk.yml            # GitHub Actions APK workflow
+│
+├── pubspec.yaml                     # Dependencies and assets
+├── pubspec.lock                    # Locked dependency versions
+├── analysis_options.yaml            # Dart code analysis rules
+├── .gitignore                       # Git ignored files
+├── README.md                        # Project documentation
+└── .metadata                        # Flutter project metadata
 
 ## UI
 ## 🎨 UI Design System
