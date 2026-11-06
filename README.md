@@ -132,9 +132,6 @@ The current matching logic uses the ingredient name, aliases, and category colum
 **Design Style:** Soft-depth 3D design system with Material Rounded icons. All icons use Material Rounded iconography instead of emojis.
 
 ---
-## Run
-    flutter pub get
-    flutter run
 
 ## Build an APK without Android Studio
 Push this folder to a GitHub repo, open Actions, run "Build Android APK",
