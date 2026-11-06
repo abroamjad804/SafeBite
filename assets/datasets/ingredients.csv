@@ -1,0 +1,34 @@
+canonical_name,aliases,category
+sugar,sucrose|cane sugar|beet sugar|sugar syrup,sweetener
+salt,sodium chloride|table salt,sodium
+glucose, dextrose|grape sugar,sugar
+fructose,fruit sugar,sugar
+high fructose corn syrup,hfcs|glucose-fructose syrup,sweetener
+aspartame,e951,sweetener
+sucralose,e955,sweetener
+acesulfame potassium,acesulfame k|e950,sweetener
+sodium benzoate,e211,preservative
+potassium sorbate,e202,preservative
+sodium nitrite,e250,preservative
+sodium nitrate,e251,preservative
+monosodium glutamate,msg|e621,flavour enhancer
+bha,butylated hydroxyanisole|e320,antioxidant
+bht,butylated hydroxytoluene|e321,antioxidant
+tbhq,e319,antioxidant
+carrageenan,e407,thickener
+citric acid,e330,acidity regulator
+ascorbic acid,vitamin c|e300,antioxidant
+lecithin,soy lecithin|sunflower lecithin,emulsifier
+milk,milk powder|skimmed milk|whole milk,allergen
+whey,whey powder|whey protein,allergen
+casein,sodium caseinate|calcium caseinate,allergen
+egg,egg powder|egg white|egg yolk,allergen
+peanut,groundnut|peanut flour,allergen
+almond,almond flour|almond paste,allergen
+wheat,wheat flour|whole wheat,allergen
+soy,soya|soybean|soy protein,allergen
+gelatin,gelatine,animal-derived
+honey,,sweetener
+palm oil,palmolein|palm fat,fat
+palm kernel oil,,fat
+butter,butter oil,animal-derived
