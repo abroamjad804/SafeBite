@@ -96,28 +96,9 @@ The workflow installs Java 17 and Flutter, fetches dependencies, builds the rele
 The starter ingredient dataset is located at:
 assets/datasets/ingredients.csv
 The current matching logic uses the ingredient name, aliases, and category columns. Keep the CSV header and expected column order consistent with the implementation when editing it. Use reliable, traceable sources when adding ingredient information, and review the dataset before project evaluation or public release.
-## Current limitations
-- Prototype authentication: Accounts and profile data are stored on the device using SharedPreferences. There is no secure remote authentication service or multi-device account synchronization.
-- Local storage: User profile and scan history are device-local and may be lost if app data is cleared or the app is uninstalled.
-- OCR accuracy: Recognition depends on image quality, lighting, focus, label layout, and supported text. Always verify extracted text against the physical package.
-- Ingredient coverage: The bundled CSV is a starter dataset, not a complete ingredient reference. Unmatched ingredients are flagged for manual verification.
-- Nutrition information: The current OCR flow extracts ingredient text; it does not reliably extract nutrition facts. Consequently, nutrition-based PHSS components may be incomplete and the app displays a warning.
-- Matching approach: Current matching is based on normalized exact names and aliases; it is not a full semantic or AI/LLM-based ingredient understanding system.
-- Platform support: Google ML Kit text recognition is mobile-specific. Web builds use a platform stub and do not provide the same OCR functionality.
-- Not clinically validated: The PHSS weights, thresholds, and ingredient signals are prototype rules and have not been clinically validated.
-Privacy and security
-This prototype stores account information, profile details, and scan history locally on the device. Passwords are hashed with SHA-256 in the local prototype, but this is not a production-grade authentication design. Do not use real or sensitive personal information in a demonstration build.
 
-Before production deployment, implement a secure backend, use a modern password-hashing scheme on the server (with a unique salt and an appropriate work factor), protect data in transit and at rest, define retention/deletion policies, and obtain informed consent for any personal data processing.
 
-## Contributing
-For project development:
-1. Create a feature branch.
-2. Make focused changes and run relevant checks.
-3. Test on a physical Android device where possible, especially OCR and image selection.
-4. Submit a pull request with a short description and screenshots for UI changes.
-License
-No license has been specified for this project. All rights remain with the project owners unless a license is added.
+
 
 ## UI
 Soft-depth "3D" design system in `lib/presentation/widgets/common/fx.dart`:
